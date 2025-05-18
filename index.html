@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KV Cement - Quality Cement Suppliers in Kollengode</title>
+    <title>KV Cement - Premium Cement Suppliers in Kollengode</title>
+    <meta name="description" content="KV Cement offers high-quality cement products in Kollengode, Palakkad. We supply Chettinad and Ambuja cement with reliable delivery.">
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { primary: "#333333", secondary: "#f8f8f8" },
+                    colors: { 
+                        primary: "#1a1a1a",
+                        secondary: "#f5f5f5",
+                        accent: "#2563eb" 
+                    },
                     borderRadius: {
                         none: "0px",
                         sm: "4px",
@@ -21,142 +26,53 @@
                         "2xl": "24px",
                         "3xl": "32px",
                         full: "9999px",
-                        button: "8px",
                     },
+                    spacing: {
+                        '128': '32rem',
+                    }
                 },
             },
         };
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Pacifico&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
     <style>
-        :where([class^="ri-"])::before {
-            content: "\f3c2";
-        }
-
         body {
-            font-family: 'Open Sans', sans-serif;
-            color: #222222;
+            font-family: 'Inter', sans-serif;
+            color: #1a1a1a;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
         }
 
-        @keyframes shine {
-            0% {
-                background-position: -200% center;
-            }
-
-            100% {
-                background-position: 200% center;
-            }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
         }
 
-        .gradient-text {
-            background: linear-gradient(90deg, #333333, #666666, #333333);
-            background-size: 200% auto;
-            color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
-            animation: shine 3s linear infinite;
-        }
-
-        .float {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .hover-lift {
+        .card-hover {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .hover-lift:hover {
+        .card-hover:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
         .fade-in.appear {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        .slide-in-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .slide-in-left.appear {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .scale-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .scale-hover:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-
-            70% {
-                transform: scale(1.05);
-                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-            }
-
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
-        }
-
-        input {
-            border: none;
-            outline: none;
         }
 
         .whatsapp-btn {
@@ -165,306 +81,470 @@
         }
 
         .whatsapp-btn:hover {
-            background-color: #1fad53;
-            transform: translateY(-2px);
+            background-color: #128C7E;
         }
 
-        nav a {
+        .nav-link {
             position: relative;
         }
 
-        nav a::after {
-            content: "";
+        .nav-link:after {
+            content: '';
             position: absolute;
+            width: 0;
+            height: 2px;
             bottom: -2px;
             left: 0;
-            width: 0%;
-            height: 2px;
-            background-color: #333;
-            transition: width 0.3s;
+            background-color: currentColor;
+            transition: width 0.3s ease;
         }
 
-        nav a:hover::after {
+        .nav-link:hover:after {
             width: 100%;
+        }
+
+        .feature-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding-top: 6rem;
+                padding-bottom: 4rem;
+            }
+            
+            .mobile-stack {
+                flex-direction: column;
+            }
+            
+            .mobile-center {
+                text-align: center;
+            }
         }
     </style>
 </head>
 
 <body class="bg-white">
     <!-- Header -->
-    <header class="w-full bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50 transition-all duration-300">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="text-2xl font-semibold text-primary tracking-tight">
-                KV Cements
+    <header class="w-full bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <div class="text-xl font-bold text-primary tracking-tight">
+                <span class="text-accent">KV</span> Cements
             </div>
-            <nav class="hidden md:flex space-x-10">
-                <a href="#" class="text-primary font-medium hover:opacity-70 transition duration-300">Home</a>
-                <a href="#products"
-                    class="text-primary font-medium hover:opacity-70 transition duration-300">Products</a>
-                <a href="#contact" class="text-primary font-medium hover:opacity-70 transition duration-300">Contact</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-primary font-medium nav-link">Home</a>
+                <a href="#products" class="text-primary font-medium nav-link">Products</a>
+                <a href="#about" class="text-primary font-medium nav-link">About</a>
+                <a href="#contact" class="text-primary font-medium nav-link">Contact</a>
             </nav>
+            <button class="md:hidden text-primary">
+                <i class="ri-menu-line ri-xl"></i>
+            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative w-full h-[600px] overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center transform hover:scale-105 transition-transform duration-3000"
-            style="background-image: url('images/2023-11-30.webp');">
-        </div>
+    <section class="relative w-full min-h-[80vh] flex items-center">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/2023-11-30.webp');"></div>
 
-        <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
-        <div class="relative h-full max-w-6xl mx-auto px-6 flex flex-col justify-center">
-            <div class="max-w-xl slide-in-left">
-                <span class="inline-block text-white/80 mb-2 text-sm tracking-wider">WELCOME TO KV CEMENT</span>
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
-                    Quality Cement Suppliers in Kollengode
+        <div class="absolute inset-0 hero-gradient"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full hero-content">
+            <div class="max-w-2xl fade-in">
+                <span class="inline-block text-white/80 mb-4 text-sm uppercase tracking-wider">Premium Cement Suppliers</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    Building Strong Foundations in Kollengode
                 </h1>
-                <p class="text-xl text-white mb-8">
-                    Malayampallam, Kollengode, Palakkad, Kerala
+                <p class="text-lg text-white/90 mb-8">
+                    Quality Chettinad & Ambuja cement with reliable delivery across Palakkad
                 </p>
-                <a href="#contact"
-                    class="inline-block bg-primary text-white py-3 px-8 !rounded-button font-medium hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Contact
-                    Us</a>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#products" class="inline-block bg-accent text-white py-3 px-8 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300">
+                        Our Products
+                    </a>
+                    <a href="#contact" class="inline-block bg-white text-primary py-3 px-8 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300">
+                        Contact Us
+                    </a>
+                </div>
             </div>
-
         </div>
     </section>
+
     <!-- Products Section -->
-    <section id="products" class="py-16 px-6 bg-secondary">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in gradient-text">
-                Our Premium Products
-            </h2>
+    <section id="products" class="py-16 px-4 sm:px-6 lg:px-8 bg-secondary">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12 fade-in">
+                <span class="text-sm uppercase tracking-wider text-gray-500">Our Offerings</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Premium Cement Products</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">We supply only the highest quality cement from trusted brands for all your construction needs</p>
+            </div>
+            
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Chettinad Cement -->
-                <div class="bg-white p-8 rounded-lg shadow-lg hover-lift fade-in">
-                    <div class="mb-6 h-48 overflow-hidden rounded-lg group">
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                    <div class="mb-6 h-64 overflow-hidden rounded-lg">
                         <img src="https://readdy.ai/api/search-image?query=Chettinad%20cement%20bag%20with%20logo%2C%20professional%20product%20photography%20on%20white%20background%2C%20clear%20branding%2C%20high%20quality%20cement%20packaging%2C%20commercial%20product%20shot&width=600&height=400&seq=2&orientation=landscape"
                             alt="Chettinad Cement"
-                            class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700" />
+                            class="w-full h-full object-cover" />
                     </div>
                     <h3 class="text-2xl font-semibold mb-3">Chettinad Cement</h3>
-                    <p class="text-gray-700 mb-4">
-                        Premium quality cement known for its strength and durability.
-                        Perfect for all construction needs.
+                    <p class="text-gray-600 mb-4">
+                        Premium quality cement known for its exceptional strength and durability. Ideal for residential and commercial construction.
                     </p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-xl font-bold text-primary">₹400 per bag</span>
-                        <a href="https://wa.me/919744491112"
-                            class="flex items-center justify-center whatsapp-btn text-white py-3 px-6 !rounded-button pulse hover:shadow-lg hover:shadow-green-500/20 transform hover:-translate-y-1 transition-all duration-300">
-                            <div class="w-6 h-6 flex items-center justify-center mr-2">
-                                <i class="ri-whatsapp-fill ri-lg"></i>
-                            </div>
-                            <span class="whitespace-nowrap">Contact: 9744491112</span>
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        <span class="text-xl font-bold text-primary">₹400/bag</span>
+                        <a href="https://wa.me/919744491112?text=Hi,%20I'm%20interested%20in%20Chettinad%20Cement"
+                            class="w-full sm:w-auto flex items-center justify-center whatsapp-btn text-white py-2 px-6 rounded-lg hover:shadow-md transition-all">
+                            <i class="ri-whatsapp-fill ri-lg mr-2"></i>
+                            Order Now
                         </a>
-
                     </div>
                 </div>
+                
                 <!-- Ambuja Cement -->
-                <div class="bg-white p-8 rounded shadow-md scale-hover fade-in">
-                    <div class="mb-6 h-48 overflow-hidden rounded">
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover fade-in">
+                    <div class="mb-6 h-64 overflow-hidden rounded-lg">
                         <img src="https://readdy.ai/api/search-image?query=Ambuja%20cement%20bag%20with%20logo%2C%20professional%20product%20photography%20on%20white%20background%2C%20clear%20branding%2C%20high%20quality%20cement%20packaging%2C%20commercial%20product%20shot&width=600&height=400&seq=3&orientation=landscape"
-                            alt="Ambuja Cement" class="w-full h-full object-cover object-top" />
+                            alt="Ambuja Cement"
+                            class="w-full h-full object-cover" />
                     </div>
                     <h3 class="text-2xl font-semibold mb-3">Ambuja Cement</h3>
-                    <p class="text-gray-700 mb-4">
-                        High-performance cement with superior strength and quick setting
-                        properties. Ideal for all types of construction.
+                    <p class="text-gray-600 mb-4">
+                        High-performance cement with superior strength and quick setting properties. Perfect for all types of construction projects.
                     </p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-xl font-bold text-primary">₹400 per bag</span>
-                        <a href="https://wa.me/919744491112"
-                            class="flex items-center justify-center whatsapp-btn text-white py-3 px-6 !rounded-button pulse hover:shadow-lg hover:shadow-green-500/20 transform hover:-translate-y-1 transition-all duration-300">
-                            <div class="w-6 h-6 flex items-center justify-center mr-2">
-                                <i class="ri-whatsapp-fill ri-lg"></i>
-                            </div>
-                            <span class="whitespace-nowrap">Contact: 9744491112</span>
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        <span class="text-xl font-bold text-primary">₹400/bag</span>
+                        <a href="https://wa.me/919744491112?text=Hi,%20I'm%20interested%20in%20Ambuja%20Cement"
+                            class="w-full sm:w-auto flex items-center justify-center whatsapp-btn text-white py-2 px-6 rounded-lg hover:shadow-md transition-all">
+                            <i class="ri-whatsapp-fill ri-lg mr-2"></i>
+                            Order Now
                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="rounded-xl overflow-hidden shadow-lg">
+                        <img src="images\2023-11-30.webp" 
+                             alt="KV Cement Store" 
+                             class="w-full h-full object-cover" />
                     </div>
+                </div>
+                
+                <div class="fade-in">
+                    <span class="text-sm uppercase tracking-wider text-gray-500">About Us</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Why Choose KV Cement</h2>
+                    
+                    <div class="space-y-6">
+                        <p class="text-gray-600">
+                            Located in the heart of Kollengode, KV Cement has been serving the construction needs of Palakkad with reliable, high-quality cement products for years.
+                        </p>
+                        
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div class="feature-card p-4 rounded-lg bg-secondary/50">
+                                <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-accent text-white feature-icon">
+                                    <i class="ri-medal-line ri-xl"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold mb-2">Premium Quality</h3>
+                                <p class="text-gray-600 text-sm">Only trusted brands with certified quality standards</p>
+                            </div>
+                            
+                            <div class="feature-card p-4 rounded-lg bg-secondary/50">
+                                <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-accent text-white feature-icon">
+                                    <i class="ri-truck-line ri-xl"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold mb-2">Reliable Delivery</h3>
+                                <p class="text-gray-600 text-sm">On-time delivery to your construction site</p>
+                            </div>
+                            
+                            <div class="feature-card p-4 rounded-lg bg-secondary/50">
+                                <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-accent text-white feature-icon">
+                                    <i class="ri-customer-service-2-line ri-xl"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold mb-2">Expert Advice</h3>
+                                <p class="text-gray-600 text-sm">Guidance on the right product for your project</p>
+                            </div>
+                            
+                            <div class="feature-card p-4 rounded-lg bg-secondary/50">
+                                <div class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-accent text-white feature-icon">
+                                    <i class="ri-price-tag-3-line ri-xl"></i>
+                                </div>
+                                <h3 class="text-lg font-semibold mb-2">Competitive Pricing</h3>
+                                <p class="text-gray-600 text-sm">Best market prices with transparent costing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Store Info -->
+            <div class="mt-16 grid md:grid-cols-2 gap-8 items-center fade-in">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-semibold mb-6">Visit Our Store</h3>
+                    <p class="mb-6 text-gray-600">
+                        Our conveniently located store in Malayampallam, Kollengode offers a wide range of cement products and expert consultation for all your construction needs.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center text-accent mr-4 mt-1">
+                                <i class="ri-map-pin-2-line ri-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p class="text-gray-600">Near Malayampallam Junction, Kollengode, Palakkad, Kerala</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center text-accent mr-4 mt-1">
+                                <i class="ri-time-line ri-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Working Hours</h4>
+                                <p class="text-gray-600">Monday - Saturday: 8:00 AM - 7:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2 rounded-xl overflow-hidden shadow-lg">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.29361669075!2d76.72162627397937!3d10.634282661801675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba813c32afa7107%3A0x45283fed2abd415a!2sKv%20cements!5e0!3m2!1sen!2sin!4v1747588182312!5m2!1sen!2sin"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="rounded-xl">
+                    </iframe>
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.29361669075!2d76.72162627397937!3d10.634282661801675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba813c32afa7107%3A0x45283fed2abd415a!2sKv%20cements!5e0!3m2!1sen!2sin!4v1747588182312!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                 </div>
             </div>
         </div>
     </section>
-    <!-- Why Choose Us -->
-    <section class="py-16 px-6 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in gradient-text">
-                Visit Our Store
-            </h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-                <div class="fade-in">
-                    <h3 class="text-2xl font-semibold mb-6">Our Physical Store</h3>
-                    <p class="mb-6 text-gray-700">
-                        Visit our conveniently located store in Malayampallam, Kollengode.
-                        We offer a wide range of cement products and expert consultation
-                        for all your construction needs.
-                    </p>
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 flex items-center justify-center text-primary">
-                            <i class="ri-time-line ri-lg"></i>
-                        </div>
-                        <span>Open: Monday - Saturday, 8:00 AM - 7:00 PM</span>
-                    </div>
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 flex items-center justify-center text-primary">
-                            <i class="ri-map-pin-line ri-lg"></i>
-                        </div>
-                        <span>Near Malayampallam Junction, Kollengode</span>
-                    </div>
-                </div>
-                <div class="fade-in">
-                    <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="https://static.readdy.ai/image/7debd901fb756505b7ca9e578b8e7fb7/15c3bd96feb9f577594d20c5218b1e42.webp"
-                            alt="KV Cement Store" class="w-full h-[400px] object-cover" />
-                    </div>
-                </div>
-            </div>
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in gradient-text">
-                Why Choose KV Cement
-            </h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-6 fade-in hover-lift">
-                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-primary float">
-                        <i class="ri-medal-line ri-3x"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Premium Quality</h3>
-                    <p class="text-gray-700">
-                        We provide only the highest quality cement products from trusted
-                        brands.
-                    </p>
-                </div>
-                <div class="text-center p-6 fade-in">
-                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-primary">
-                        <i class="ri-truck-line ri-3x"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Quick Delivery</h3>
-                    <p class="text-gray-700">
-                        Fast and reliable delivery service to your construction site.
-                    </p>
-                </div>
-                <div class="text-center p-6 fade-in">
-                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-primary">
-                        <i class="ri-customer-service-2-line ri-3x"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Expert Support</h3>
-                    <p class="text-gray-700">
-                        Our team provides expert advice on the right cement for your
-                        project.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="py-16 px-6 bg-secondary">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 fade-in gradient-text">
-                Contact Us
-            </h2>
-
-            <div class="fade-in space-y-6">
-                <h3 class="text-2xl font-semibold">Get in Touch</h3>
-                <p class="mb-6">
-                    Need cement for your construction project? Contact us for the best
-                    prices and quick delivery in Kollengode and surrounding areas.
-                </p>
-
-                <div class="flex flex-col items-center space-y-4">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-10 h-10 flex items-center justify-center text-primary">
-                            <i class="ri-map-pin-line ri-lg"></i>
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 bg-secondary">
+        <div class="max-w-4xl mx-auto fade-in">
+            <div class="text-center mb-12">
+                <span class="text-sm uppercase tracking-wider text-gray-500">Get in Touch</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Contact KV Cement</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions or need cement for your project? Reach out to us today.</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center text-accent mr-4 mt-1">
+                                    <i class="ri-map-pin-2-line ri-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Address</h4>
+                                    <p class="text-gray-600">Malayampallam, Kollengode, Palakkad, Kerala</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center text-accent mr-4 mt-1">
+                                    <i class="ri-phone-line ri-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Phone</h4>
+                                    <p class="text-gray-600">+91 9744491112</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center text-accent mr-4 mt-1">
+                                    <i class="ri-mail-line ri-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <p class="text-gray-600">info@kvcement.com</p>
+                                </div>
+                            </div>
                         </div>
-                        <span>Malayampallam, Kollengode, Palakkad, Kerala</span>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium mb-3">Connect With Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-accent hover:text-white transition-colors">
+                                    <i class="ri-facebook-fill ri-lg"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-accent hover:text-white transition-colors">
+                                    <i class="ri-instagram-line ri-lg"></i>
+                                </a>
+                                <a href="https://wa.me/919744491112" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-green-500 hover:text-white transition-colors">
+                                    <i class="ri-whatsapp-line ri-lg"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="flex items-center space-x-2">
-                        <div class="w-10 h-10 flex items-center justify-center text-primary">
-                            <i class="ri-phone-line ri-lg"></i>
-                        </div>
-                        <span>+91 9744491112</span>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Send Us a Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-accent outline-none transition"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-accent text-white py-3 px-6 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-300">
+                                Send Message
+                            </button>
+                        </form>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
-                    <a href="https://wa.me/919744491112"
-                        class="flex items-center justify-center whatsapp-btn text-white py-3 px-6 !rounded-button pulse hover:shadow-lg hover:shadow-green-500/20 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2">
-                            <i class="ri-whatsapp-fill ri-lg"></i>
-                        </div>
-                        <span class="whitespace-nowrap">Chat with us on WhatsApp</span>
-                    </a>
-
-                    <a href="tel:+919744491112"
-                        class="flex items-center justify-center bg-primary text-white py-3 px-6 !rounded-button hover:shadow-lg hover:bg-opacity-90 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="w-6 h-6 flex items-center justify-center mr-2">
-                            <i class="ri-phone-fill ri-lg"></i>
-                        </div>
-                        <span class="whitespace-nowrap">Call us: +91 9744491112</span>
-                    </a>
-                </div>
+    <!-- Call to Action -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-primary text-white">
+        <div class="max-w-7xl mx-auto rounded-xl bg-accent p-8 md:p-12 text-center fade-in">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Construction Project?</h2>
+            <p class="max-w-2xl mx-auto mb-6 text-white/90">Get high-quality cement delivered to your site in Kollengode and surrounding areas.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+919744491112" class="inline-flex items-center justify-center bg-white text-primary py-3 px-8 rounded-lg font-medium hover:bg-opacity-90 transition-all">
+                    <i class="ri-phone-line ri-lg mr-2"></i> Call Now
+                </a>
+                <a href="https://wa.me/919744491112" class="inline-flex items-center justify-center whatsapp-btn text-white py-3 px-8 rounded-lg font-medium hover:bg-opacity-90 transition-all">
+                    <i class="ri-whatsapp-line ri-lg mr-2"></i> WhatsApp
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-6 bg-primary text-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0 flex items-center">
-                    <img src="https://static.readdy.ai/image/7debd901fb756505b7ca9e578b8e7fb7/6d18292775beba62df218e7fa771ebd6.webp"
-                        alt="KV Cement" class="h-12 mr-3" />
-                    <div>
-                        <h1 class="text-2xl font-bold mb-1">KV Cement</h1>
-                        <p class="text-sm opacity-80">
-                            Quality Cement Suppliers in Kerala
-                        </p>
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 bg-primary text-white/80">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold mb-4">
+                        <span class="text-accent">KV</span> Cements
                     </div>
-                </div>
-                <div class="text-center md:text-right">
-                    <p class="text-sm opacity-80">
-                        © 2025 KV Cement. All rights reserved.
-                    </p>
-                    <p class="text-sm opacity-80 mt-1">
-                        Malayampallam, Kollengode, Palakkad, Kerala
+                    <p class="text-sm">
+                        Quality cement suppliers serving Kollengode and surrounding areas with reliable products and service.
                     </p>
                 </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#products" class="hover:text-white transition-colors">Chettinad Cement</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">Ambuja Cement</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-map-pin-2-line ri-sm mt-1 mr-2"></i>
+                            <span>Malayampallam, Kollengode, Palakkad</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-phone-line ri-sm mt-1 mr-2"></i>
+                            <span>+91 9744491112</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-8 pt-8 text-sm text-center">
+                <p>© 2025 KV Cement. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Fade in animation
+            // Mobile menu toggle
+            const menuButton = document.querySelector('header button');
+            const nav = document.querySelector('header nav');
+            
+            menuButton?.addEventListener('click', () => {
+                nav?.classList.toggle('hidden');
+            });
+            
+            // Intersection Observer for animations
             const fadeElements = document.querySelectorAll(".fade-in");
-            const slideElements = document.querySelectorAll(".slide-in-left");
             const appearOptions = {
                 threshold: 0.1,
-                rootMargin: "0px 0px -100px 0px",
+                rootMargin: "0px 0px -50px 0px",
             };
-            const appearOnScroll = new IntersectionObserver(function (
-                entries,
-                appearOnScroll,
-            ) {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) return;
-                    entry.target.classList.add("appear");
-                    appearOnScroll.unobserve(entry.target);
+            
+            const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("appear");
+                        observer.unobserve(entry.target);
+                    }
                 });
             }, appearOptions);
-            fadeElements.forEach((element) => {
+            
+            fadeElements.forEach(element => {
                 appearOnScroll.observe(element);
             });
-            slideElements.forEach((element) => {
-                appearOnScroll.observe(element);
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (!nav.classList.contains('hidden')) {
+                            nav.classList.add('hidden');
+                        }
+                    }
+                });
             });
-            // Initial animations
-            setTimeout(() => {
-                document.querySelector("header").classList.add("appear");
-            }, 300);
-            setTimeout(() => {
-                const heroContent = document.querySelector(".slide-in-left");
-                if (heroContent) heroContent.classList.add("appear");
-            }, 600);
         });
     </script>
 </body>
