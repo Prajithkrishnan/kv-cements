@@ -83,17 +83,11 @@
                 <!-- Language Toggle -->
                 <button id="langToggle"
                     class="flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors duration-200 cursor-pointer">
-                    <span class="lang-en">ML</span>
-                    <span class="lang-ml">EN</span>
-                </button>
-                <!-- Dark Mode Toggle -->
-                <button id="darkModeToggle"
-                    class="w-10 h-10 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors duration-200 cursor-pointer">
-                    <i class="ri-sun-line dark:hidden ri-lg"></i>
-                    <i class="ri-moon-line hidden dark:block ri-lg"></i>
+                    <span class="lang-en" title="Malayalam">ML</span>
+                    <span class="lang-ml" title="English">EN</span>
                 </button>
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn"
+                <button id="mobileMenuBtn" title="MENU"
                     class="w-10 h-10 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors duration-200 cursor-pointer">
                     <i class="ri-menu-line ri-lg"></i>
                 </button>
@@ -177,11 +171,11 @@
                             <span class="lang-ml malayalam">ഞങ്ങളുടെ കഥ</span>
                         </h3>
                         <p class="text-gray-700 dark:text-gray-300 mb-4">
-                            <span class="lang-en">Established in 2005, KV Cements has grown to become one of the most
+                            <span class="lang-en">Established in 2018, KV Cements has grown to become one of the most
                                 trusted cement wholesalers in Kerala. With over 18 years of experience in the industry,
                                 we pride ourselves on delivering high-quality construction materials at competitive
                                 prices.</span>
-                            <span class="lang-ml malayalam">2005-ൽ സ്ഥാപിതമായ കെവി സിമന്റ്സ് കേരളത്തിലെ ഏറ്റവും
+                            <span class="lang-ml malayalam">2018-ൽ സ്ഥാപിതമായ കെവി സിമന്റ്സ് കേരളത്തിലെ ഏറ്റവും
                                 വിശ്വസനീയമായ സിമന്റ് മൊത്തവ്യാപാരികളിൽ ഒന്നായി വളർന്നിരിക്കുന്നു. വ്യവസായത്തിൽ 18
                                 വർഷത്തിലധികം പരിചയസമ്പന്നരായ ഞങ്ങൾ, മത്സരാധിഷ്ഠിത വിലയിൽ ഉയർന്ന നിലവാരമുള്ള നിർമ്മാണ
                                 സാമഗ്രികൾ നൽകുന്നതിൽ അഭിമാനിക്കുന്നു.</span>
@@ -640,26 +634,7 @@
                 });
             });
         });
-        document.addEventListener('DOMContentLoaded', function () {
-            // Dark Mode Toggle
-            const darkModeToggle = document.getElementById('darkModeToggle');
-            const html = document.documentElement;
-            // Check for saved theme preference or use system preference
-            const savedTheme = localStorage.getItem('theme');
-            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-                html.classList.add('dark');
-            }
-            darkModeToggle.addEventListener('click', function () {
-                html.classList.toggle('dark');
-                // Save preference
-                if (html.classList.contains('dark')) {
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    localStorage.setItem('theme', 'light');
-                }
-            });
-        });
+
         document.addEventListener('DOMContentLoaded', function () {
             // Language Toggle
             const langToggle = document.getElementById('langToggle');
